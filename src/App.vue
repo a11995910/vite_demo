@@ -82,7 +82,7 @@ export default {
     })
     let shallowrefstate = shallowRef({a:'1',b:{b:"11"}});
     function shaoolwmyFn(){
-      //当不修改第一层时，就不会更新UI，如果修改 那么所有层次的数据大家一起执行,shallowRef的.value同理
+      //当不修改第一层时，就不会更新UI，如果修改 那么所有层次的数据大家一起执行,shallowRef的.value同理,浅响应实现方法，深响应去掉shallow
       // shaoolwstate.a = Math.random();
       //不过有一个triggerRef(xxx),把不接受监听的数据变化为接受监听的，如果不写，深层次的ref变化不会更新UI（1层的还是会变化）
       shaoolwstate.gf.f.c = 2;
